@@ -20,13 +20,8 @@ sudo systemctl start docker
 echo "Adding ubuntu user to docker group..."
 sudo usermod -aG docker ubuntu
 
-echo "Installing Nginx..."
-if ! command -v nginx &> /dev/null
-then
-  sudo apt install nginx -y
-  sudo systemctl enable nginx
-  sudo systemctl start nginx
-fi
+echo "Stopping old containers (if any)..."
+sudo docker compose down || true
 
 echo "Building and starting containers..."
 sudo docker compose up -d --build
