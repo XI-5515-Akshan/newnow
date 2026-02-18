@@ -27,3 +27,5 @@ echo "Building and starting containers..."
 sudo docker compose up -d --build
 
 echo "Setup completed successfully."
+
+#new
