@@ -28,4 +28,4 @@ sudo docker compose up -d --build
 
 echo "Setup completed successfully."
 
-#new
+#new if added more
