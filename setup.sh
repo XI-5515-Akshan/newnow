@@ -13,7 +13,7 @@ then
   curl -fsSL https://get.docker.com | sudo bash
 fi
 
-echo "Enabling Docker..."
+echo "Starting and enabling Docker..."
 sudo systemctl enable docker
 sudo systemctl start docker
 
@@ -27,9 +27,6 @@ then
   sudo systemctl enable nginx
   sudo systemctl start nginx
 fi
-
-echo "Checking docker compose..."
-docker compose version
 
 echo "Building and starting containers..."
 sudo docker compose up -d --build
